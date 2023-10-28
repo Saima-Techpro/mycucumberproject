@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         glue = "stepdefinitions", //path of the stepdefinitions folder
 //        dryRun = true,  // generates missing step defs without running the existing step defs
         dryRun = false,
-        tags = "@iPhone"
+        tags = "@MedunnaRoom"
 )
 public class Runner {
 }
