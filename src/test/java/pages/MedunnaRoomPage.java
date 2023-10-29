@@ -13,7 +13,7 @@ public class MedunnaRoomPage {
     }
 
     @FindBy(id = "jh-create-entity")
-    public WebElement createANewRoomButton;
+    public WebElement createNewRoomButton;
 
     @FindBy(id = "room-roomNumber")
     public WebElement roomNumberInput;

@@ -28,7 +28,7 @@ public class MedunnaRoomStepDefs {
     @When("click on Create a new room button")
     public void click_on_create_a_new_room_button() {
         WaitUtils.waitFor(1);
-        medunnaRoomPage.createANewRoomButton.click();
+        medunnaRoomPage.createNewRoomButton.click();
     }
 
     @And("enter {string} room number input")
@@ -91,6 +91,10 @@ public class MedunnaRoomStepDefs {
     }
 
 
+    @And("enter {int} room number input")
+    public void enterRoomNumberInput(int roomNo) {
+
+    }
 }
 
 

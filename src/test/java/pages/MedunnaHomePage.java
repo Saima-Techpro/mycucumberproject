@@ -21,4 +21,16 @@ public class MedunnaHomePage {
 
     @FindBy(linkText = "Room")
     public WebElement roomOption;
+
+    @FindBy(id = "username")
+    public WebElement usernameInput;
+
+    @FindBy(id = "password")
+    public WebElement passwordInput;
+
+    @FindBy(id = "rememberMe")
+    public WebElement rememberMeCheckbox;
+
+    @FindBy(xpath = " //button[@type='submit']")
+    public WebElement signInSubmitButton;
 }

@@ -26,7 +26,9 @@ Feature: Medunna Room Creation
     And close the application
     Examples:
       | room_number | price | description |
-      | 7224940    | 123   | Good        |
-      | 9112998    | 432   | Well        |
-      | 8222339    | 200   | Perfect     |
-      | 1667190    | 234   | Cool        |
+      | 72234940    | 123   | Seaview     |
+      | 91182998    | 432   | Double      |
+      | 82922339    | 200   | Baby Cot    |
+      | 16637190    | 234   | Airy        |
+
+    # option +command + l  to format the code
