@@ -31,4 +31,4 @@ Feature: Medunna Room Creation
       | 82922339    | 200   | Baby Cot    |
       | 16637190    | 234   | Airy        |
 
-    # option +command + l  to format the code
+    # option+command + l  to format the code
