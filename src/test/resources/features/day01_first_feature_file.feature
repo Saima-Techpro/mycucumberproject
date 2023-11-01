@@ -1,3 +1,4 @@
+@smoke
 Feature: google_search_feature
 
 #Background is used for repeated pre- conditions
@@ -8,10 +9,12 @@ Feature: google_search_feature
   Scenario: TC01_iphone_search
     And user search for iPhone
     Then verify the result contains iPhone
+    And close the application
   @tea_pot
   Scenario: TC02_tea_pot_search
     And search for porcelain tea pot
     Then verify the result contains porcelain tea pot
+    And close the application
 
 
 

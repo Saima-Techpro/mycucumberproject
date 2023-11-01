@@ -1,4 +1,4 @@
-@param_feature
+@param_feature @regression
 Feature: search_feature
   Scenario: TC01_iphone_search
     Given user navigates to "https://www.google.com"
