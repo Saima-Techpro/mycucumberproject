@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",//path of the features folder
         glue = {"stepdefinitions", "hooks"},//path of the stepdefinitions folder and hooks folder
         dryRun = false, //generate the missing step definitions only. Do not run the existing step definitions
-        tags = "@smoke"
+        tags = ""
 )
 public class SmokeRunner {
 }
