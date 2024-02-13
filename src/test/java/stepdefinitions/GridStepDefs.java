@@ -13,13 +13,16 @@ import java.net.URL;
 import java.time.Duration;
 
 public class GridStepDefs {
+
 //    Create Driver object
     WebDriver driver;
 
     @Given("user navigates to {string} using {string} browser")
     public void user_navigates_to_using_browser(String url, String browser) throws MalformedURLException {
-        //        1. create a URL object
+
+//        1. Create a URL object
         URL remoteURL = new URL(" http://192.168.1.36:4444");
+
 //        2. instantiating the REMOTE WEB DRIVER
         if (browser.equalsIgnoreCase("chrome")){
             driver = new RemoteWebDriver(remoteURL, new ChromeOptions());
