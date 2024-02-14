@@ -12,45 +12,54 @@ public class DBStepDefs {
         DBUtils.createConnection();
     }
     @And("user gets the column {string} from the table {string}")
-    public void userGetsTheColumnFromTheTable(String column, String table) {
+    public void userGetsTheColumnFromTheTable(String columnName, String tableName) {
 //        DBUtils.executeQuery( "select * from jhi_user" ); hard coded
-        DBUtils.executeQuery( "select "+column+" from "+table+"" );
+        DBUtils.executeQuery( "select "+columnName+" from "+tableName+"" );
+
     }
     @And("read all the column {string} data")
-    public void readAllTheColumnData(String column) throws SQLException {
+    public void readAllTheColumnData(String columnName) throws SQLException {
 //        go the next row
         DBUtils.getResultset().next();
 //        getting the data
-        Object object1 = DBUtils.getResultset().getObject(column);
+        Object object1 = DBUtils.getResultset().getObject(columnName);
         System.out.println(object1);
 //        --------------------------
         DBUtils.getResultset().next();
-        Object object2 = DBUtils.getResultset().getObject(column);
+        Object object2 = DBUtils.getResultset().getObject(columnName);
         System.out.println(object2);
 //        --------------------------
         DBUtils.getResultset().next();
-        Object object3 = DBUtils.getResultset().getObject(column);
+        Object object3 = DBUtils.getResultset().getObject(columnName);
         System.out.println(object3);
 //        --------------------------
+//        Going to a specific row
         DBUtils.getResultset().absolute(4);//going to the 4th row
-        Object object4 = DBUtils.getResultset().getObject(column);
+        Object object4 = DBUtils.getResultset().getObject(columnName);
         System.out.println(object4);
 //        ---------------------------
+//        Using while loop
+
         int rowNum = 5;
         while (DBUtils.getResultset().next()){
-            Object currentRowData = DBUtils.getResultset().getObject(column);
+            Object currentRowData = DBUtils.getResultset().getObject(columnName);
             System.out.println(rowNum +" : "+ currentRowData);
             rowNum++;
         }
-        System.out.println("There are "+rowNum +" data in this column "+column);
+        System.out.println("There are "+rowNum +" data in "+columnName + " column");
     }
     @Then("verify table {string} and column {string} contains data {string}")
-    public void verify_table_and_column_contains_data(String table, String column, String data) {
+    public void verify_table_and_column_contains_data(String tableName, String columnName, String dataName) {
 //        get the column names
 //        store in a list
-        List<Object> allColumnData = DBUtils.getColumnData("select "+column+" from "+table+"",column);
-        System.out.println(allColumnData);
+        List<Object> allColumnData = DBUtils.getColumnData("select "+columnName+" from "+tableName+"",columnName);
+        System.out.println("Column Data: "+allColumnData);
 //        assert if that list contains the given data
-        Assert.assertTrue(allColumnData.contains(data));
+        Assert.assertTrue(allColumnData.contains(dataName));
+    }
+
+    @Then("close the connection")
+    public void closeTheConnection() {
+        DBUtils.closeConnection();
     }
 }

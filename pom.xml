@@ -74,6 +74,13 @@
             <version>3.11.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.1</version>
+        </dependency>
+
 
 
     </dependencies>
@@ -110,10 +117,6 @@
                         </goals>
                         <configuration>
                             <includes>**/*Runner*.java</includes>
-                            <parallel>methods</parallel>
-                            <!--                            maximum number of browser-->
-                            <threadCount>3</threadCount>
-                            <perCoreThreadCount>false</perCoreThreadCount>
                             <!--                            <useUnlimitedThreads>true</useUnlimitedThreads>-->
                         </configuration>
                     </execution>

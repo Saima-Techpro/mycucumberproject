@@ -17,7 +17,7 @@ public class DBUtils {
     //    resultSet : used to perform DB actions such as going to specific rows, get data as string, get data as object
     private static ResultSet resultSet;
     /**
-     * DBUtils.createConnection(); -> to connect to teh database
+     * DBUtils.createConnection(); -> to connect to the database
      */
     public static void createConnection() {
         String url = "jdbc:postgresql://157.230.48.97:5432/gmibank_db";
